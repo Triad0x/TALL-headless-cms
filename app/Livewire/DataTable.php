@@ -4,15 +4,14 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithPagination;
-// use App\Models\Post;
-// use App\Models\Category;
-// use App\Models\Page;
 use Mary\Traits\Toast;
 
 class DataTable extends Component
 {
     use Toast;
     use WithPagination;
+
+    protected $listeners = ['refreshTable' => '$refresh'];
 
     public $model;
     public $perPage = 10;
