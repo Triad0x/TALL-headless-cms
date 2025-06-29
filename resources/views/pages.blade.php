@@ -1,5 +1,5 @@
-<x-layouts.app :title="__('Posts')">
+<x-layouts.app :title="__('Pages')">
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
-        <h1>Pages</h1>
+        @livewire('pages.table')
     </div>
 </x-layouts.app>
