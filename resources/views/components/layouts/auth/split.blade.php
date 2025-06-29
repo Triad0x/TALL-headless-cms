@@ -39,5 +39,6 @@
             </div>
         </div>
         @fluxScripts
+        @include('partials.daisy-ui')
     </body>
 </html>

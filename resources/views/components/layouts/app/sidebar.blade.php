@@ -137,7 +137,8 @@
         </flux:header>
 
         {{ $slot }}
-
+        <x-mary-toast position="toast-top toast-center" />
         @fluxScripts
+        @include('partials.daisy-ui')
     </body>
 </html>
