@@ -40,6 +40,11 @@ class Form extends Component
         ];
     }
 
+    public function updatingFormTitle($value): void
+    {
+        $this->form->slug = str($value)->slug();
+    }
+
     #[On('create-data')]
     public function onCreate()
     {
@@ -52,7 +57,7 @@ class Form extends Component
     public function edit($id)
     {
         $this->postId = $id;
-        $this->form->edit(Post::findOrFail($id));
+        $this->form->fillForm(Post::findOrFail($id));
         $this->drawer = true;
     }
 

@@ -9,7 +9,12 @@
         right
     >
         <div class="flex flex-col gap-4">
-            <x-mary-input type="text" label="Page Title" placeholder="insert page title" wire:model="form.title" />
+            <x-mary-input
+                type="text"
+                label="Page Title"
+                placeholder="insert page title"
+                wire:model.live.debounce.300ms="form.title"  />
+            <x-mary-input type="text" label="Page Slug" wire:model="form.slug" disabled />
             <x-mary-radio label="Select page status" wire:model="form.status" :options="$statusOpt" inline />
 
             <x-mary-choices-offline
@@ -67,8 +72,6 @@
                 wire:model="form.content"
                 placeholder="write your content ..."
                 rows="10"
-                hint="max 5000 characters"
-                maxlength="5000"
             />
         </div>
 

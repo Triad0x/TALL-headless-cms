@@ -12,6 +12,7 @@ class PostForm extends Form
     public ?Post $post = null;
 
     public string $title = '';
+    public string $slug = '';
     public string $status = 'draft';
     public $image = null;
     public $imageUrl = null;
@@ -23,6 +24,12 @@ class PostForm extends Form
     {
         return [
             'title' => ['required', 'min:3', 'max:255'],
+            'slug' => [
+                'required',
+                'min:3',
+                'max:255',
+                Rule::unique('posts', 'slug')->ignore($this->post?->id),
+            ],
             'status' => ['required', 'in:draft,published'],
             'image' => [$this->post ? 'nullable' : 'required', 'image', 'max:5120'],
             'content' => ['required', 'string', 'min:10'],
@@ -54,6 +61,7 @@ class PostForm extends Form
 
         $post = Post::create([
             'title' => $this->title,
+            'slug' => $this->slug,
             'status' => $this->status,
             'image' => $this->image ? $this->image->storeAs('', $this->getImagePath(), 'public') : null,
             'content' => $this->content,
@@ -65,11 +73,12 @@ class PostForm extends Form
         $this->reset();
     }
 
-    public function edit(Post $post)
+    public function fillForm(Post $post)
     {
         $this->post = $post;
 
         $this->title = $post->title;
+        $this->slug = $post->slug;
         $this->status = $post->status;
         $this->content = $post->content;
         $this->imageUrl = $post->image ? asset('storage/' . $post->image) : null;
@@ -83,6 +92,7 @@ class PostForm extends Form
 
         $this->post->update([
             'title' => $this->title,
+            'slug' => $this->slug,
             'status' => $this->status,
             'content' => $this->content,
             'short_description' => $this->shortDescription,
