@@ -25,6 +25,13 @@
                     <flux:navlist.item icon="tag" :href="route('categories')" :current="request()->routeIs('categories')" wire:navigate>
                         {{ __('Categories') }}
                     </flux:navlist.item>
+                    <flux:navlist.item icon="folder"
+                        :href="route('file-manager')"
+                        :current="request()->routeIs('file-manager')"
+                        target="_blank"
+                    >
+                        {{ __('File Manager') }}
+                    </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 

@@ -14,6 +14,7 @@ Route::middleware(['auth'])->group(function () {
     Route::view('posts', 'posts')->name('posts');
     Route::view('pages', 'pages')->name('pages');
     Route::view('categories', 'categories')->name('categories');
+    Route::view('file-manager', 'file-manager')->name('file-manager');
     Route::redirect('settings', 'settings/profile');
 
     Route::get('settings/profile', Profile::class)->name('settings.profile');
