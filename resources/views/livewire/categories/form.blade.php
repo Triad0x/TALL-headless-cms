@@ -8,7 +8,10 @@
         class="w-11/12 lg:w-1/3"
         right
     >
-        <x-mary-input type="text" label="Category Name" wire:model="form.name" />
+        <div class="grid grid-col-1 gap-4">
+            <x-mary-input type="text" label="Category Name" wire:model.live.debounce.300ms="form.name" />
+            <x-mary-input type="text" label="Category Slug" wire:model="form.slug" disabled />
+        </div>
     
         <x-slot:actions>
             <x-mary-button label="Cancel" @click="$wire.drawer = false" />
