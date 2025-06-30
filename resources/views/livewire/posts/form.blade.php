@@ -5,7 +5,7 @@
         separator
         with-close-button
         close-on-escape
-        class="w-11/12 lg:w-1/3"
+        class="w-11/12 lg:w-3/6"
         right
     >
         <div class="flex flex-col gap-4">
@@ -68,11 +68,11 @@
                 maxlength="255"
             />
 
-            <x-mary-textarea label="Content"
+            <x-mary-markdown
                 wire:model="form.content"
-                placeholder="write your content ..."
-                rows="10"
-            />
+                label="Post content"
+                disk="public"
+                folder="posts/images" />
         </div>
 
         <x-slot:actions>
@@ -82,3 +82,14 @@
         </x-slot:actions>
     </x-mary-drawer>
 </x-mary-form>
+
+@push('styles')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+ 
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+@endpush
+
+@push('scripts')
+
+@endpush
