@@ -8,8 +8,12 @@
         class="w-11/12 lg:w-1/3"
         right
     >
-        <div class="flex flex-col gap-4">
-            <x-mary-input type="text" label="Page Title" placeholder="insert page title" wire:model="form.title" />
+        <div class="grid grid-col-1 gap-4">
+            <x-mary-input type="text"
+                label="Page Title"
+                placeholder="insert page title"
+                wire:model.live.debounce.300ms="form.title" />
+            <x-mary-input type="text" label="Page Slug" wire:model="form.slug" disabled />
             <x-mary-radio label="Select page status" wire:model="form.status" :options="$statusOpt" inline />
             <x-mary-textarea label="Body" wire:model="form.body" placeholder="type something ..." rows="20" />
         </div>

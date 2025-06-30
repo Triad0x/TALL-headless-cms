@@ -34,6 +34,11 @@ class Form extends Component
         ];
     }
 
+    public function updatingFormTitle($value): void
+    {
+        $this->form->slug = str($value)->slug();
+    }
+
     #[On('create-data')]
     public function onCreate()
     {
@@ -42,41 +47,23 @@ class Form extends Component
         $this->drawer  = true;
     }
 
-    public function create()
-    {
-        $validated = $this->form->validate();
-        Page::create($validated);
-
-        $this->reset();
-        $this->success('Page created successfully.');
-    }
-
     #[On('edit-data')] 
     public function edit($id)
     {
         $this->pageId = $id;
-        $this->form->fill(Page::findOrFail($id)->toArray());
+        $this->form->fillForm(Page::findOrFail($id));
         $this->drawer = true;
-    }
-
-    public function update()
-    {
-        $validated = $this->form->validate();
-        $page = Page::findOrFail($this->pageId);
-        $page->update($validated);
-
-        $this->reset();
-        $this->success('Page updated successfully.');
     }
 
     public function submit()
     {
-        if ($this->pageId) {
-            $this->update();
-        } else {
-            $this->create();
-        }
+        $action = $this->pageId ? 'update' : 'create';
+        
+        $this->form->{$action}();
+        
+        $this->success("Page {$action}d successfully!");
         $this->dispatch('refreshTable');
+        $this->reset();
     }
 
     public function render()
