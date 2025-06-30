@@ -30,11 +30,23 @@ class Post extends Model
 
         static::creating(function ($post) {
             $post->slug = Str::slug($post->title);
+
+            if ($post->status === 'published' && is_null($post->published_at)) {
+                $post->published_at = now();
+            }
         });
 
         static::updating(function ($post) {
             if ($post->isDirty('title')) {
                 $post->slug = Str::slug($post->title);
+            }
+
+            if (
+                $post->isDirty('status') &&
+                $post->status === 'published' &&
+                is_null($post->published_at)
+            ) {
+                $post->published_at = now();
             }
         });
     }
