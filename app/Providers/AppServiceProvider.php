@@ -5,6 +5,10 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Category;
 use App\Observers\CategoryObserver;
+use App\Models\Page;
+use App\Observers\PageObserver;
+use App\Models\Post;
+use App\Observers\PostObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,5 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Category::observe(CategoryObserver::class);
+        Page::observe(PageObserver::class);
+        Post::observe(PostObserver::class);
     }
 }
