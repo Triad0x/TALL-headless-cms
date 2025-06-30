@@ -4,6 +4,7 @@ use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
+use LivewireFilemanager\Filemanager\Http\Controllers\Files\FileController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,3 +24,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('{path}', [FileController::class, 'show'])
+    ->where('path', '.*')
+    ->name('assets.show');
