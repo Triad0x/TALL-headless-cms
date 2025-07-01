@@ -105,4 +105,15 @@ return [
 
     'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache_'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Default Cache Expiration Time for Api
+    |--------------------------------------------------------------------------
+    |
+    | This option controls the default cache expiration time in minutes for
+    | API responses. This is used on BaseCollection
+    |
+    */
+
+    'api_expiration' => env('CACHE_API_EXPIRATION', 60), // 60 minutes by default
 ];
