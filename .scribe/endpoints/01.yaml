@@ -1,0 +1,138 @@
+name: 'Posts endpoints'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/posts
+    metadata:
+      groupName: 'Posts endpoints'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      limit:
+        name: limit
+        description: 'Number of items per page. Must be at least 1. Must not be greater than 100.'
+        required: false
+        example: 10
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      page:
+        name: page
+        description: 'The page number. Must be at least 1.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      sort:
+        name: sort
+        description: 'Sort direction (asc or desc).'
+        required: false
+        example: desc
+        type: string
+        enumValues:
+          - asc
+          - desc
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      sort_by:
+        name: sort_by
+        description: 'Field to sort the result by.'
+        required: false
+        example: id
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      limit: 10
+      page: 1
+      sort: desc
+      sort_by: id
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":20,"title":"Mollitia est culpa in dicta officia non.","slug":"mollitia-est-culpa-in-dicta-officia-non","content":"Eius aut libero id consectetur. Odio officia voluptates qui. Occaecati libero rerum sint molestiae sunt. Et animi ea voluptatem sit et quaerat dolore.\n\nRepellat quia numquam repudiandae quis non. Corporis sint quam ut aut. Non dolor ullam aliquam minus. Sit qui consequatur itaque error consequatur quia nobis. Deserunt tempora quis placeat nobis.\n\nConsequatur corrupti sit sint et consequatur voluptas. Assumenda tenetur modi vero eaque eius nesciunt distinctio. Eius alias sed id quas voluptas officiis. Voluptatibus quas dolores sapiente pariatur nisi.\n\nVoluptatem et dolorem et corporis. Quis enim quasi esse rem laudantium enim. Ipsa sed sint architecto veritatis pariatur. Commodi et et ipsa eius ut quo.\n\nQuibusdam dolor maxime ipsa nemo aut ab sit exercitationem. Ad dolor ut repellendus et dolore. Doloribus saepe numquam officia assumenda libero ut quisquam. Eum qui optio fuga voluptates magnam repudiandae modi odio.","short_description":"Et laudantium qui sequi.","image_url":"http:\/\/localhost\/storage\/posts\/mollitia-est-culpa-in-dicta-officia-non\/main.jpg","status":"published","published_at":"2025-03-09T22:49:01.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:45:49.000000Z","categories":[{"id":3,"name":"Sport","slug":"sport","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":4,"name":"Entertainment","slug":"entertainment","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":5,"name":"Crypto","slug":"crypto","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":19,"title":"Ut consectetur molestiae voluptatibus tempore non.","slug":"ut-consectetur-molestiae-voluptatibus-tempore-non","content":"Nulla laborum ab consequatur non. Rerum alias ratione aspernatur aut nostrum magnam.\n\nVoluptas quo animi a voluptatum aut. Deserunt molestias blanditiis similique corporis. Qui dignissimos laborum similique tempore ut sit. Reiciendis quae deserunt in vitae repellat voluptas voluptatem.\n\nNumquam voluptatem non earum porro sunt quo exercitationem. Ut optio praesentium culpa non maiores quia eos quibusdam. Quos officia molestias fuga ipsum tempore. Vel quibusdam omnis adipisci repellat.\n\nAutem magni aut modi fugiat. Ducimus est facilis est. Quisquam eius aspernatur voluptas eum ipsam. Ut porro non natus facilis ratione deleniti expedita voluptatem.\n\nOmnis nemo quia culpa est qui maiores. Delectus placeat illum quis quis. Sunt enim non quo voluptas officiis officiis modi molestiae. Reprehenderit temporibus sed rerum numquam magnam.","short_description":"Laboriosam ut ut repudiandae deleniti aut praesentium.","image_url":"http:\/\/localhost\/storage\/posts","status":"draft","published_at":"2024-10-31T18:14:11.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":1,"name":"Tech","slug":"tech","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":4,"name":"Entertainment","slug":"entertainment","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":5,"name":"Crypto","slug":"crypto","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":18,"title":"Doloribus maxime voluptas nisi ab autem.","slug":"doloribus-maxime-voluptas-nisi-ab-autem","content":"Sed dolorem animi porro. Aperiam laboriosam dolorem error sit nihil iure. Unde dolore architecto qui necessitatibus nostrum repellendus. Totam minima ipsum nesciunt aut cum doloribus similique. Veritatis vitae eos vel voluptatum ipsam.\n\nDeleniti in cumque voluptatum deserunt ducimus dolor quas. Distinctio sit quo ut aut. Adipisci et ut exercitationem aut quia. Ex voluptas fugit hic accusantium ad sunt harum.\n\nMaiores excepturi praesentium deserunt maxime aspernatur est et. Harum assumenda optio nisi qui in et ipsa. Deserunt labore rerum iure eaque quae nostrum omnis et. Aut labore et aut quis ex iure.\n\nCum sequi eos incidunt nostrum. Voluptas dolores est ipsum vitae quia. Nisi et doloremque voluptatem iste.\n\nSoluta quas aut unde iusto recusandae in rerum. Non ex cumque modi quia. Accusamus velit veniam eum qui.","short_description":"Est dolorem minus deserunt vero ut earum qui.","image_url":"http:\/\/localhost\/storage\/posts","status":"draft","published_at":"2024-11-16T01:24:44.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":1,"name":"Tech","slug":"tech","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":2,"name":"health","slug":"health","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":5,"name":"Crypto","slug":"crypto","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":17,"title":"Quia et totam suscipit quod minus est aspernatur id.","slug":"quia-et-totam-suscipit-quod-minus-est-aspernatur-id","content":"Eligendi quis odio temporibus sequi enim. Quas soluta placeat labore vel doloribus. Ut provident eos voluptas minus. Commodi deleniti minus omnis consequatur consequatur non voluptas officia.\n\nIn vitae sit labore quam. Temporibus aut et velit accusantium itaque ut deleniti. Doloremque veritatis soluta et facere at autem velit libero.\n\nMolestias voluptatem est enim quis doloremque officiis omnis. Deserunt temporibus ipsam ut possimus impedit rerum.\n\nAutem consequatur suscipit reiciendis quisquam. Quia aspernatur itaque occaecati voluptates qui. Quia modi sint consectetur et.\n\nBlanditiis quisquam velit repellat qui animi quas. Numquam culpa nobis reprehenderit et nisi quos. Autem architecto doloribus in beatae et fugit. Reiciendis reprehenderit similique qui.","short_description":"Non dolorem cumque doloremque quis eos voluptatum ipsa.","image_url":"http:\/\/localhost\/storage\/posts","status":"published","published_at":"2024-07-22T14:26:46.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":2,"name":"health","slug":"health","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":16,"title":"Atque blanditiis natus eaque voluptas ea nam.","slug":"atque-blanditiis-natus-eaque-voluptas-ea-nam","content":"Minus non molestiae placeat neque esse. Ut et ea facere similique debitis. Et sint sed veniam. Quos aliquid quis minima est amet.\n\nAlias impedit ducimus magni ratione et neque omnis. In accusamus commodi minima culpa. Qui ut inventore adipisci consequatur quas fugiat et. Ut assumenda quia est repellendus magnam.\n\nSunt dolorem neque nemo quis sit aut non excepturi. Laborum accusantium officiis beatae facere inventore error aut neque. Qui aut ipsa occaecati incidunt est qui ducimus iure.\n\nAliquam rerum eveniet numquam quidem sed. Eius vitae inventore quos numquam. Eaque est ut mollitia et.\n\nEt porro et laudantium a. Quo illum quam ipsam est est laboriosam quos aut.","short_description":"Veritatis et eligendi debitis aut.","image_url":"http:\/\/localhost\/storage\/posts","status":"published","published_at":"2025-05-06T15:59:05.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":1,"name":"Tech","slug":"tech","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":2,"name":"health","slug":"health","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":15,"title":"Error placeat non libero dignissimos.","slug":"error-placeat-non-libero-dignissimos","content":"Adipisci suscipit id ut quo dicta. Quisquam praesentium voluptatibus modi id sapiente. Ducimus et inventore ut eum.\n\nPerspiciatis itaque accusantium voluptas sed. Sed illum cum incidunt vel. Blanditiis quia sequi incidunt est nam possimus. Aut quibusdam ratione facilis saepe voluptatem.\n\nAdipisci doloribus qui est et. Tenetur fugiat et assumenda dolorem exercitationem consequatur. Et est rerum consectetur totam est voluptatum. Quasi enim et aut aut ut ut.\n\nSapiente sit eos aspernatur maiores ut reprehenderit. Voluptatum at quasi consequatur. Cupiditate omnis sunt consequatur at ad quidem sequi. Modi corrupti et possimus quis.\n\nVoluptas asperiores id sint aut voluptas quasi. Et ut qui quos vel quidem esse. Molestias qui labore eum magnam quae aut ut. Explicabo dolorem accusamus aut ut minus.","short_description":"Animi velit id voluptatem enim repellendus sit et.","image_url":"http:\/\/localhost\/storage\/posts","status":"published","published_at":"2024-08-08T15:31:25.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":4,"name":"Entertainment","slug":"entertainment","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":5,"name":"Crypto","slug":"crypto","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":14,"title":"Voluptas voluptate eum odit provident.","slug":"voluptas-voluptate-eum-odit-provident","content":"Officia eum sint saepe. Voluptatem consequatur et unde. Similique suscipit saepe nobis eos aut minima consequatur alias. Perferendis sit nisi reiciendis sapiente eaque odio atque.\n\nIpsa eveniet vitae minima aut ut et vel sit. Soluta at odio ex nostrum aut quia in. Modi assumenda vero consequatur vel ad ipsam.\n\nIste aut tempore amet eos. Qui est vel eligendi est amet error. Sint officiis ipsum et expedita id ut. Porro voluptatem quo deleniti est explicabo voluptatem.\n\nDolorem quasi ipsam commodi est. Est exercitationem omnis porro hic. Ipsa rerum inventore eum ut veritatis sunt nisi earum.\n\nQuia eaque soluta labore. Ipsa quis accusamus sed quidem sapiente. Dolorum eum officia qui quo consequatur molestiae. Nam ut suscipit tempora autem ut mollitia eos sed. Aut officia rerum sit qui quia.","short_description":"Vel repudiandae error eos amet inventore aliquid autem.","image_url":"http:\/\/localhost\/storage\/posts","status":"published","published_at":"2025-05-11T04:03:50.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":2,"name":"health","slug":"health","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":5,"name":"Crypto","slug":"crypto","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":13,"title":"Iusto quae amet fuga et.","slug":"iusto-quae-amet-fuga-et","content":"Et est fugiat omnis voluptas. Et nostrum ut facilis veniam aut iste. Voluptatem non nam officia enim est voluptas ea ipsam. Esse nulla expedita cupiditate voluptate distinctio sunt provident doloremque.\n\nAsperiores voluptates necessitatibus sed. Inventore mollitia sint veritatis et nemo deserunt sequi. Aut excepturi reiciendis autem dolores quisquam. Dicta soluta itaque ipsum molestiae rerum pariatur quisquam.\n\nFugiat amet velit autem fugit iusto inventore. Ut aut amet quibusdam. Voluptatem consequatur fugiat ipsum.\n\nIllo molestiae ipsam minus quas. Aut et nesciunt omnis provident. Aspernatur dolores magni sequi et.\n\nCumque et sunt est quo rerum. Incidunt et tempora dicta asperiores illum vel. Inventore enim quidem qui voluptatem officiis nihil. Deleniti excepturi ratione repudiandae.","short_description":"Voluptas nulla omnis quam.","image_url":"http:\/\/localhost\/storage\/posts","status":"published","published_at":"2025-03-16T18:24:40.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":1,"name":"Tech","slug":"tech","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":2,"name":"health","slug":"health","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":4,"name":"Entertainment","slug":"entertainment","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":12,"title":"Aut ut provident quisquam et aut amet vitae cum.","slug":"aut-ut-provident-quisquam-et-aut-amet-vitae-cum","content":"Eos excepturi aut aut nam dolorum. Odio qui aut qui dolor voluptatem et hic dolor. Corporis blanditiis aut deleniti aut alias ut dolorem.\n\nFacere error laudantium nostrum voluptatem nihil maxime. Unde accusamus non corrupti et. Sed nostrum numquam quis dolorem at optio.\n\nAccusamus pariatur deleniti veniam ratione quos veritatis. Placeat quis corporis et porro quasi ullam. Totam quam sit fugit inventore optio et. Aut quibusdam adipisci modi quasi.\n\nRepellat occaecati sit voluptas animi. Odio odio sed porro voluptates recusandae. Cum enim mollitia mollitia rerum cumque dolorem sequi voluptas. Illum amet voluptas ab harum blanditiis corrupti velit.\n\nOdit nesciunt accusantium non et omnis. Accusantium molestiae eum voluptas. Necessitatibus rerum rerum neque et doloribus est tempore consectetur.","short_description":"Saepe id est et et.","image_url":"http:\/\/localhost\/storage\/posts","status":"draft","published_at":"2024-09-15T05:32:55.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":3,"name":"Sport","slug":"sport","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":4,"name":"Entertainment","slug":"entertainment","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":5,"name":"Crypto","slug":"crypto","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]},{"id":11,"title":"Totam adipisci voluptas et possimus nostrum hic vero sint.","slug":"totam-adipisci-voluptas-et-possimus-nostrum-hic-vero-sint","content":"Aliquid odio ea repudiandae quia excepturi. Repellat sed ducimus harum rerum. Voluptatem in aperiam repudiandae ut et consequatur.\n\nFugiat rem ut consequuntur aperiam voluptatem non. Debitis error harum voluptas ea commodi cum. Cumque qui officia voluptate qui id praesentium quo adipisci. Sed voluptas hic cupiditate in nemo nostrum perspiciatis.\n\nQuia molestiae dicta ea nihil in nemo. Vel beatae atque vero quos dolores cupiditate magni. Aliquid ut perspiciatis placeat hic ducimus ratione. Minima culpa eum enim ut enim rem eligendi praesentium.\n\nNumquam architecto itaque cupiditate eum. Itaque est veritatis sit incidunt illum molestias est. Aut et placeat rerum nemo ut.\n\nAut ullam non similique et. In dolorum dolorem recusandae. Dolorem sed molestiae possimus voluptatem. Est eius perspiciatis enim perspiciatis ipsa expedita.","short_description":"Fugit adipisci magnam optio voluptas sed et.","image_url":"http:\/\/localhost\/storage\/posts","status":"published","published_at":"2025-02-03T04:32:39.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":2,"name":"health","slug":"health","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":4,"name":"Entertainment","slug":"entertainment","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"},{"id":5,"name":"Crypto","slug":"crypto","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]}],"links":{"first":"http:\/\/localhost\/api\/posts?page=1","last":"http:\/\/localhost\/api\/posts?page=2","prev":null,"next":"http:\/\/localhost\/api\/posts?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/posts?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/posts?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/posts?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/posts","per_page":10,"to":10,"total":20}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/posts/{id}'
+    metadata:
+      groupName: 'Posts endpoints'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":1,"title":"Qui distinctio iure laborum aut eaque in.","slug":"qui-distinctio-iure-laborum-aut-eaque-in","content":"Perferendis est nihil repellendus eligendi illo. Hic consequatur quia et quo ut accusantium. Recusandae et molestiae et fuga.\n\nDolorum molestiae velit ut ipsum quae ratione. Perferendis expedita voluptatem nihil voluptas commodi ducimus est minus. Assumenda necessitatibus sunt aliquam non doloremque impedit. Et dolores a id quo similique.\n\nIn perferendis autem at harum enim. Qui natus molestiae doloremque voluptatem. Vero officia labore in quia aut atque aut.\n\nAperiam dolore eius ut reiciendis unde magni soluta. Ut molestiae adipisci est delectus non. Est consequuntur quo nulla est aperiam labore voluptates aut. Qui voluptatem et aut delectus. Perspiciatis rerum voluptatum iusto commodi perspiciatis.\n\nNecessitatibus consectetur quia est ut dolor. Autem aut voluptatem omnis inventore sunt. Laudantium mollitia doloremque voluptas quis perspiciatis iste aut.","short_description":"Officia atque iusto omnis adipisci sunt est id totam.","image_url":"http:\/\/localhost\/storage\/posts","status":"published","published_at":"2024-08-27T08:54:02.000000Z","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z","categories":[{"id":2,"name":"health","slug":"health","created_at":"2025-06-30T23:40:21.000000Z","updated_at":"2025-06-30T23:40:21.000000Z"}]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

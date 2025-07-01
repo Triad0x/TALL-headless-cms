@@ -1,0 +1,138 @@
+name: 'Pages endpoints'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/pages
+    metadata:
+      groupName: 'Pages endpoints'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      limit:
+        name: limit
+        description: 'Number of items per page. Must be at least 1. Must not be greater than 100.'
+        required: false
+        example: 10
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      page:
+        name: page
+        description: 'The page number. Must be at least 1.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      sort:
+        name: sort
+        description: 'Sort direction (asc or desc).'
+        required: false
+        example: desc
+        type: string
+        enumValues:
+          - asc
+          - desc
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      sort_by:
+        name: sort_by
+        description: 'Field to sort the result by.'
+        required: false
+        example: id
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      limit: 10
+      page: 1
+      sort: desc
+      sort_by: id
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":16,"title":"New page thing","slug":"new-page-thing","body":"This is new page desc","status":"published","created_at":"2025-07-01T00:11:06.000000Z","updated_at":"2025-07-01T00:11:06.000000Z"},{"id":15,"title":"Cumque non quas voluptatem.","slug":"cumque-non-quas-voluptatem","body":"Porro asperiores exercitationem eius odio. Fugit temporibus totam distinctio suscipit numquam qui. Ea sit pariatur porro quod modi suscipit ipsa. Incidunt autem consequatur officia molestiae ea sequi eius.\n\nNobis a veniam et ex omnis et. Adipisci saepe quidem quo voluptas ea. Quisquam excepturi aut et. Quod maiores deleniti et sunt maiores impedit. Sit repellendus omnis ad.\n\nSed natus aut numquam dicta ipsam et. Quia aliquam ut quod facere in. Animi iure quisquam labore et libero culpa qui atque.","status":"draft","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"},{"id":14,"title":"Ex dolorem rem error sed non vero.","slug":"ex-dolorem-rem-error-sed-non-vero","body":"Officiis fugit non consequatur qui. Nostrum enim architecto doloribus expedita et.\n\nId cupiditate et doloremque aliquam fugiat rerum. Facere quibusdam optio alias reprehenderit. Quis similique quidem eum ut.\n\nVitae et voluptatem possimus suscipit possimus ipsa officiis. Sunt ab eius quia. Quibusdam sequi earum accusamus est. Dolores minima quo voluptatem sed hic.","status":"draft","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"},{"id":13,"title":"Dolor sint consequatur consequuntur totam sit minus optio.","slug":"dolor-sint-consequatur-consequuntur-totam-sit-minus-optio","body":"Consequatur reprehenderit ratione optio non nihil. Rem deleniti quibusdam voluptas omnis dignissimos ut voluptatem non. Illo rerum voluptatem ut. Nulla sed saepe distinctio ut consequatur dolor explicabo.\n\nBeatae in et error eaque est perferendis qui. Consectetur corporis illo qui. Molestiae recusandae accusamus occaecati ratione laboriosam et. Explicabo perspiciatis aut laboriosam sit nostrum unde odio velit.\n\nDolorum vitae nulla quia optio id voluptatum. Nihil sed totam earum. Excepturi qui eveniet vel animi.","status":"draft","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"},{"id":12,"title":"Et fuga veritatis quia et a ipsum ut.","slug":"et-fuga-veritatis-quia-et-a-ipsum-ut","body":"Tenetur et eaque qui laudantium libero reprehenderit. Id inventore et totam sed dolorem et. Porro qui dignissimos dolores in accusantium quis nam inventore.\n\nEst impedit eum ad omnis laborum. Dolorem maxime incidunt qui placeat rerum praesentium sed. Non doloremque soluta enim consequuntur. Laborum dolores animi doloribus voluptas ut. Et est est laborum quas molestiae alias accusantium.\n\nPerferendis dicta occaecati aliquid ipsa laborum. Officia culpa repudiandae et saepe saepe. Id error atque nobis nulla. Id aut mollitia aut. Odit et placeat cum eligendi eos qui accusantium.","status":"published","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"},{"id":11,"title":"Quisquam officia qui itaque provident rerum minima accusantium.","slug":"quisquam-officia-qui-itaque-provident-rerum-minima-accusantium","body":"Temporibus velit eos iure harum voluptas voluptas. Sequi inventore qui consectetur enim neque fuga non amet. Nihil qui labore saepe nihil enim facilis. Commodi atque accusantium quos maxime eaque voluptatem eos odio.\n\nFacilis nihil nisi ducimus quos quas quia perspiciatis. Sit aut ex rerum iure dignissimos. Accusamus vel delectus in rerum atque.\n\nRem aliquam reiciendis non ducimus. Dolore ut nostrum eveniet est. Magnam sequi ut eius eos explicabo sed est.","status":"draft","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"},{"id":10,"title":"Quia amet animi quidem magni a.","slug":"quia-amet-animi-quidem-magni-a","body":"Repudiandae ducimus quam adipisci. Saepe molestias perferendis ut et et. Quod perspiciatis ea repellendus veniam. Et rerum culpa consequatur culpa saepe velit vel.\n\nEveniet sed nesciunt id. Nisi sit doloribus similique minus dolorem quis rerum.\n\nVoluptate molestiae laborum necessitatibus ut libero aut. Tempore reiciendis voluptatem similique fugiat nostrum quis exercitationem. Et nulla enim molestiae ducimus saepe. Quia sed consectetur pariatur laboriosam voluptas dolores.","status":"published","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"},{"id":9,"title":"Alias minus mollitia cumque in qui.","slug":"alias-minus-mollitia-cumque-in-qui","body":"Eum recusandae qui numquam voluptates autem praesentium. Eum voluptate eligendi ex qui consequuntur quis saepe. Quibusdam quis sequi aperiam omnis. Nihil veniam optio animi sint consequatur.\n\nQuos voluptates doloribus quidem ipsam fugiat consequatur. Sit quis dolorem laudantium qui sed. Et praesentium eius incidunt officia et veniam dolorem.\n\nNumquam repellat doloribus eum id laborum. Exercitationem voluptatem similique doloremque sit sed dolorum. Assumenda tenetur ullam et omnis fugit voluptas sit possimus. Dolor maiores mollitia dolores pariatur dolorum accusamus.","status":"draft","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"},{"id":8,"title":"Iure nulla debitis ipsum illo ad voluptas blanditiis.","slug":"iure-nulla-debitis-ipsum-illo-ad-voluptas-blanditiis","body":"Similique reprehenderit eligendi et sequi deleniti consequuntur quis. Nobis expedita porro laborum magni voluptatibus. Omnis cumque deserunt qui repellendus. Omnis ut corrupti consectetur iusto minima.\n\nOdio ut neque officia eligendi qui ea consequuntur autem. Repudiandae qui quas sunt et soluta aut officia. Qui consequuntur eos id in sequi harum aut.\n\nPraesentium porro laborum fuga harum enim nemo qui possimus. Voluptas at cum nisi cupiditate impedit omnis. Commodi consectetur rerum animi vel non tempore eum.","status":"draft","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"},{"id":7,"title":"Expedita necessitatibus cum aut mollitia.","slug":"expedita-necessitatibus-cum-aut-mollitia","body":"Ut laborum quis mollitia delectus et. Et id et sed. Eaque qui occaecati adipisci provident qui ut omnis. Modi rerum distinctio omnis soluta maiores est.\n\nAut minus perspiciatis deserunt impedit ipsa. Itaque quas dolorum impedit natus expedita consequatur dolorem. Repellendus dolores id non sapiente.\n\nSint est voluptas odio voluptatem sit. Totam aut esse neque quia aut delectus. Distinctio animi aut sed sed numquam velit eos et.","status":"published","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"}],"links":{"first":"http:\/\/localhost\/api\/pages?page=1","last":"http:\/\/localhost\/api\/pages?page=2","prev":null,"next":"http:\/\/localhost\/api\/pages?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/pages?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/pages?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/pages?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/pages","per_page":10,"to":10,"total":16}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/pages/{id}'
+    metadata:
+      groupName: 'Pages endpoints'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the page.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":1,"title":"Accusantium pariatur suscipit maxime quia ab deserunt omnis.","slug":"accusantium-pariatur-suscipit-maxime-quia-ab-deserunt-omnis","body":"Et possimus ut unde. Temporibus repudiandae blanditiis voluptas officia fugit sed totam officiis. Occaecati ratione asperiores neque nobis ut.\n\nEaque dolore culpa consequatur culpa at iure. Sed laborum ad aut velit.\n\nAutem exercitationem et aliquid ducimus at molestiae modi minus. Voluptates doloremque voluptatem recusandae unde aut. Facilis ut excepturi eum asperiores voluptatem reprehenderit.","status":"draft","created_at":"2025-06-30T23:40:22.000000Z","updated_at":"2025-06-30T23:40:22.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
