@@ -47,7 +47,7 @@
                     x-show="$wire.form.imageUrl"
                     class="w-[70vw] lg:w-[30vw] aspect-video rounded-lg object-contain cursor-pointer"
                     :src="$wire.form.imageUrl" 
-                    alt=""
+                    alt="Image not found"
                     @click="$refs.fileUploadContainer.querySelector('input[type=file]').click()">
                     
                 <!-- New Temporary Image -->
@@ -55,7 +55,7 @@
                     <img
                         class="w-[70vw] lg:w-[30vw] aspect-video rounded-lg object-contain cursor-pointer"
                         src="{{ $this->form->image?->temporaryUrl() }}"
-                        alt=""
+                        alt="Image not found"
                         @click="$refs.fileUploadContainer.querySelector('input[type=file]').click()">
                 </div>
             </div>

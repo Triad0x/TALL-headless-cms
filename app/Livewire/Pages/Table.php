@@ -12,13 +12,13 @@ class Table extends Component
     use Toast;
 
     public Page $data;
-    public $drawer = false;
+    public $drawerDetail = false;
 
     #[On('show-detail')] 
     public function detail($id)
     {
         $this->data = Page::findOrFail($id);
-        $this->drawer = true;
+        $this->drawerDetail = true;
     }
 
     public function render()

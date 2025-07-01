@@ -5,7 +5,7 @@
     ])
 
     <x-mary-drawer
-        wire:model="drawer"
+        wire:model="drawerDetail"
         title="Page Details"
         separator
         with-close-button

@@ -5,15 +5,19 @@ namespace App\Livewire\Posts;
 use Livewire\Component;
 use Livewire\Attributes\On; 
 use Mary\Traits\Toast;
+use App\Models\Post;
 
 class Table extends Component
 {
     use Toast;
+    public Post $data;
+    public $drawerDetail = false;
 
     #[On('show-detail')] 
     public function detail($id)
     {
-        $this->info('Show details for item with ID: ' . $id);
+        $this->data = Post::findOrFail($id);
+        $this->drawerDetail = true;
     }
 
     public function render()

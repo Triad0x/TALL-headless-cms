@@ -66,4 +66,9 @@ class Post extends Model
     {
         return $this->image ? asset('storage/' . $this->image) : null;
     }
+
+    public function getHtmlContentAttribute()
+    {
+        return Str::markdown($this->content);
+    }
 }
