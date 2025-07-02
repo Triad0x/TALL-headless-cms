@@ -35,8 +35,12 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
+# Clear cache & run migrations
+RUN php artisan config:clear
+RUN php artisan migrate --force
+
 # (Optional) Build frontend assets
 # RUN npm install && npm run build
 
 # Start Laravel using Artisan Serve
-CMD php artisan serve --host=0.0.0.0 --port=${PORT:-9000}
+CMD php artisan serve --host=0.0.0.0 --port=9000
