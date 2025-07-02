@@ -78,6 +78,11 @@ select:focus[data-flux-control] {
     themes: light --default, dark --prefersdark;
 }
 
+@plugin "daisyui/theme" {
+  name: "dark";
+  --color-accent-content: var(--color-teal-700);
+}
+
 /* maryUI */
 @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
 

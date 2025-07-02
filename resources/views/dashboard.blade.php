@@ -5,9 +5,6 @@
             <livewire:dashboard.page-count />
             <livewire:dashboard.category-count />
         </div>
-        <div class="relative h-full flex-1 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700 shadow-lg">
-            <x-livewire-filemanager />
-        </div>
     </div>
     @push('scripts')
         @filemanagerScripts
