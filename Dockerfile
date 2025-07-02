@@ -26,6 +26,10 @@ RUN pecl install redis && docker-php-ext-enable redis
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Install Node.js & npm (for Vite)
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
+
 # Set working directory
 WORKDIR /var/www
 
@@ -34,6 +38,9 @@ COPY . .
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
+
+# Install frontend and build Vite assets
+RUN npm install && npm run build
 
 # Clear cache
 RUN php artisan config:clear
