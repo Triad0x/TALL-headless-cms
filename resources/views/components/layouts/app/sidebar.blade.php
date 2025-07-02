@@ -28,7 +28,7 @@
                     <flux:navlist.item icon="folder"
                         :href="route('file-manager')"
                         :current="request()->routeIs('file-manager')"
-                        target="_blank"
+                        wire:navigate
                     >
                         {{ __('File Manager') }}
                     </flux:navlist.item>
