@@ -6,9 +6,10 @@ use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use LivewireFilemanager\Filemanager\Http\Controllers\Files\FileController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');
+Route::redirect('/', '/dashboard')->name('home');
 
 Route::middleware(['auth'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
