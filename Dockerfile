@@ -42,6 +42,14 @@ RUN composer install --no-dev --optimize-autoloader
 # Install frontend and build Vite assets
 RUN npm install && npm run build
 
+# set permission
+RUN mkdir -p storage/framework/livewire-tmp \
+    && chmod -R 775 storage bootstrap/cache \
+    && chown -R www-data:www-data storage bootstrap/cache
+
+# Link storage
+RUN php artisan storage:link
+
 # Clear cache
 RUN php artisan config:clear
 
