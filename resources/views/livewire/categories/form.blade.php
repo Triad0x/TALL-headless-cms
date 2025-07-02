@@ -9,7 +9,7 @@
         right
     >
         <div class="grid grid-col-1 gap-4">
-            <x-mary-input type="text" label="Category Name" wire:model.live.debounce.300ms="form.name" />
+            <x-mary-input type="text" label="Category Name" wire:model.live="form.name" />
             <x-mary-input type="text" label="Category Slug" wire:model="form.slug" disabled />
         </div>
     

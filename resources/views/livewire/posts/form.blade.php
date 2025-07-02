@@ -13,7 +13,7 @@
                 type="text"
                 label="Page Title"
                 placeholder="insert page title"
-                wire:model.live.debounce.300ms="form.title"  />
+                wire:model.live="form.title"  />
             <x-mary-input type="text" label="Page Slug" wire:model="form.slug" disabled />
             <x-mary-radio label="Select page status" wire:model="form.status" :options="$statusOpt" inline />
 
