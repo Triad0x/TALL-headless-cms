@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 use App\Models\Category;
 use App\Observers\CategoryObserver;
 use App\Models\Page;
@@ -25,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
         Category::observe(CategoryObserver::class);
         Page::observe(PageObserver::class);
         Post::observe(PostObserver::class);
