@@ -15,4 +15,7 @@ export default defineConfig({
     server: {
         cors: true,
     },
+    base: process.env.NODE_ENV === 'production'
+        ? '/build/'
+        : undefined,
 });
