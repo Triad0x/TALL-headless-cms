@@ -15,9 +15,11 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        $user = User::factory()->make(['email' => 'test@example.com']);
+
         User::firstOrCreate(
-            ['email' => 'test@example.com'],
-            ['name' => 'Test User'],
+            ['email' => $user->email],
+            $user->only(['name', 'password', 'email_verified_at', 'remember_token']),
         );
 
         $this->call([
