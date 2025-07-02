@@ -35,9 +35,8 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Clear cache & run migrations
+# Clear cache
 RUN php artisan config:clear
-RUN php artisan migrate --force
 
 # (Optional) Build frontend assets
 # RUN npm install && npm run build
