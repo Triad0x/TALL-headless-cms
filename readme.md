@@ -13,6 +13,8 @@ File media Manager using [Livewire File Manager](https://github.com/livewire-fil
     sail artisan key:generate
     sail artisan storage:link
     sail npm run build
+    # optional (for generating thumbnail on file manager)
+    sail artisan que work
 
 > Api doc at: {domain}/docs
 
