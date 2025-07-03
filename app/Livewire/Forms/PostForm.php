@@ -16,7 +16,7 @@ class PostForm extends Form
     public string $status = 'draft';
     public $image = null;
     public $imageUrl = null;
-    public string $content = '';
+    public string $content = 'Type Some Content Here...';
     public ?string $shortDescription = '';
     public array $categories = [];
 
